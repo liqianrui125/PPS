@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}Upper bounds and Least upper bound}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Upper and Lower Bounds}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Least Upper Bounds and Greatest Lower Bounds}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Completeness Axiom for the real numbers}{3}{}%
+\contentsline {section}{\numberline {2}Limits}{4}{}%
+\contentsline {subsection}{\numberline {2.1}The $\epsilon -\mathbb {N}$ definition of a limit.}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Bounded Sequence}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Application: the existence of roots}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Infinite limits}{4}{}%
+\contentsline {section}{\numberline {3}The monotone Convergence Theorem}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Monotonic}{5}{}%
+\contentsline {subsection}{\numberline {3.2}literatively defined sequence}{5}{}%
+\contentsline {section}{\numberline {4}Decimals and Series}{6}{}%
+\contentsline {subsection}{\numberline {4.1}Decimals}{6}{}%
+\contentsline {subsection}{\numberline {4.2}The number e}{6}{}%
+\contentsline {section}{\numberline {5}Complex number}{7}{}%
+\contentsline {subsection}{\numberline {5.1}Definition 9.1 - Complex numbers definition}{7}{}%
+\contentsline {subsection}{\numberline {5.2}Argand diagram}{7}{}%
+\contentsline {subsection}{\numberline {5.3}Definition 9.2 - Modulus}{7}{}%
+\contentsline {subsection}{\numberline {5.4}Definition 9.3 - Complex conjugate}{7}{}%
+\contentsline {subsection}{\numberline {5.5}Definition 9.4 - Cartesian and Polar form}{8}{}%
+\contentsline {subsection}{\numberline {5.6}multiplication of complex}{8}{}%
+\contentsline {subsection}{\numberline {5.7}Exponential form: Euler's formula}{8}{}%
+\contentsline {subsection}{\numberline {5.8}Theorem9.4 - Roots of Unity}{8}{}%
+\contentsline {section}{\numberline {6}Polynomials}{9}{}%
+\contentsline {subsection}{\numberline {6.1}Definition 10.1}{9}{}%
+\contentsline {subsection}{\numberline {6.2}Abel-Ruffini Theorem}{9}{}%
+\contentsline {subsection}{\numberline {6.3}Theorem 10.2 - Fundamental Theorem of Algebra.}{9}{}%
+\contentsline {subsection}{\numberline {6.4}Theorem 10.3 - Factorization Theorem}{9}{}%
+\contentsline {subsection}{\numberline {6.5}Theorem 10.4 - Real Polynomials}{9}{}%
+\contentsline {subsection}{\numberline {6.6}Theorem 10.5 - Root-Coefficient Theorem}{9}{}%
