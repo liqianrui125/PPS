@@ -1,6 +1,31 @@
 \documentclass{article}
-\usepackage{blindtext, titlesec, amsthm, thmtools, amsmath, amsfonts, scalerel, amssymb, graphicx, titlesec, xcolor, multicol}
+\usepackage{blindtext, titlesec, amsthm, thmtools, amsmath, amsfonts, scalerel, amssymb, graphicx, titlesec, xcolor, multicol, hyperref}
 \usepackage[utf8]{inputenc}
+\usepackage{biblatex}
+% \addbibresource{./reference/reference.bib}
+% For hyperlink:
+\hypersetup{colorlinks, linkcolor={red!40!black}, citecolor={blue!50!black}, urlcolor={blue!80!black}}
+
+%Latex Environment 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}{Corollarium}[section]
+\newtheorem{proposition}{Proposition}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{definition}
+\newtheorem{axiom}{Axiom}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Observatio}[section]
+\newtheorem{hypothesis}{Coniectura}[section]
+\newtheorem{example}{Exampli Gratia}[section]
+
+% Renew Command 
+\renewenvironment{proof}{{\emph{Demonstratio.}}}{\qed}
+% \renewenvironment{proof}{{\bfseries\emph{Demonstratio.}}}{\qed}
+\renewcommand\qedsymbol{Q.E.D.}
 
 \graphicspath{{images/}}
 \usepackage{amssymb}
@@ -9,11 +34,11 @@
 \author{Li Qianrui}
 
 \begin{document}
+
 \maketitle
 \tableofcontents
 
 \newpage
-
 
 \section{Upper bounds and Least upper bound}
 
@@ -28,19 +53,29 @@
 \end{figure}
 
 \subsection{Least Upper Bounds and Greatest Lower Bounds}
-\textbf{Definition 5.2} \\
-Given a subset $A\sqsubseteq \mathbb{R}$, a number L is a \textbf{least upper bound (LUB)} or supremum for A if:\\
-(a)L is an upper bound for A, that is, $x\leq L$ for all $x\in A$;\\
-(b)$L\leq M$ for every upper bound M of A \textbf{or} \\ for all $t < L$, there exist $x\in A$ such that $x>t$.\\
- \\
-\textbf{Greatest lower boudn (GLB)} or infinum for A is similar to LUB\\
+
+\begin{definition}[Least Upper Bound]
+Given a subset $A\subseteq \mathbb{R}$, a number L is a \textbf{least upper bound (LUB)} or supremum for A if and only if:
+\begin{enumerate}
+	\item L is an upper bound for A, that is, $x\leq L$ for all $x\in A$;\\
+	% TODO Need Rephrasing.
+	\item $L\leq M$ for every upper bound M of A \textbf{or} \\ for all $t < L$, there exist $x\in A$ such that $x>t$.\\
+\end{enumerate}
+This is definition 5.2 in the textbook.
+\end{definition}
+
+\begin{definition}[Greatest Lower Bound]
+\end{definition}
 
 \subsection{Completeness Axiom for the real numbers}
 Every nonempty subset of $\mathbb{R}$ that is bounded above has a \emph{least upper bound}.\\
-\\
-\textbf{Theorem 5.1}\\
-\textbf{The Archimedean property} holds. That is, for any $x,y\in \mathbb{R}$ with $x,y>0$, there is some $n\in \mathbb{N}$ such that $ny>x$.\\
-\textit{(Could be prove by contradiction)}
+
+\begin{theorem}[The Archimedean Property]
+For any $x,y\in \mathbb{R}$ with $x,y>0$, there is some $n\in \mathbb{N}$ such that $ny>x$. (Theorem 5.1 in the textbook).
+\end{theorem}
+\begin{remark}
+Could be prove by contradiction
+\end{remark}
 
 \newpage
 
