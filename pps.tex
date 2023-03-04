@@ -10,9 +10,9 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}{Corollarium}[section]
-\newtheorem{proposition}{Proposition}[theorem]
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[definition]
 
 \theoremstyle{definition}
 \newtheorem{axiom}{Axiom}[section]
@@ -95,17 +95,18 @@ When $x_{n}$ converges to L, we write $x_{n} \rightarrow L$ as $n\rightarrow \in
 
 \subsection{Bounded Sequence}
 
-We say that a sequence $(a_{n})$ is \textbf{bounded} if the set of values {a1,a2,...} is a bounded set. 
-\\i.e. thereare m,M such that $m \leq a_{n} \leq M$ for all n.\\
-\\
-\textbf{Proposition 6.1}\\
-Suppose the sequence $(a_{n})$ converges. Then it is bounded.\\
-\\
-\textbf{Proposition 6.3}\\
-Suppose that $x_{n} \rightarrow L$ as $n \rightarrow \infty$ and that $k \in \mathbb{N}$. Then $x{_{n}^{k}} \rightarrow L^{k}$ as $n \rightarrow \infty$.\\
+\begin{definition}
+    We say that a sequence $(a_{n})$ is \textbf{bounded} if the set of values {a1,a2,...} is a bounded set. 
+    i.e. there are m,M such that $m \leq a_{n} \leq M$ for all n.
+\end{definition}
 
+\begin{proposition}
+    Suppose the sequence $(a_{n})$ converges. Then it is bounded.
+\end{proposition}
 
-
+\begin{proposition}
+    Suppose that $x_{n} \rightarrow L$ as $n \rightarrow \infty$ and that $k \in \mathbb{N}$. Then $x{_{n}^{k}} \rightarrow L^{k}$ as $n \rightarrow \infty$.\\
+\end{proposition}
 
 \subsection {Application: the existence of roots}
 \textbf{Theorem 6.6}\\
