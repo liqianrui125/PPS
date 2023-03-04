@@ -44,13 +44,20 @@
 
 \subsection{Upper and Lower Bounds}
 %Definition 5.1: Let A be a subset of R \\
+\begin{definition}[Upper and Lower Bounds]
+$M$ is a upper bound of a set $A$ if $M \geq a$ for all $a \in A$ 
+$N$ is a lower bound of a set $A$ if $N \leq a$ for all $a \in A$
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Definition5.1}\\
-    %\caption{A nice plot.}
-    %\label{fig:mesh1}
-\end{figure}
+A set is bounded if it has both a upper bound and a lower bound.
+
+\end{definition}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Definition5.1}\\
+%     %\caption{A nice plot.}
+%     %\label{fig:mesh1}
+% \end{figure}
 
 \subsection{Least Upper Bounds and Greatest Lower Bounds}
 
@@ -113,14 +120,16 @@ When $x_{n}$ converges to L, we write $x_{n} \rightarrow L$ as $n\rightarrow \in
 Let $x>0$ and $k \in \mathbb{N}$. Then there is a unique $y>0$ such that $y^{k}=x$.\\
 
 \subsection {Infinite limits}
-\textbf{Definition 6.4}
-Let ${x_{n}}$ be a sequence of real numbers.\\
-\\
-(a) We say $(x_{n})$ tends to $\infty$ or \textbf{diverges} to $\infty$, and write $x_{n}\rightarrow \infty$ as $n \rightarrow \infty$ if for all $M > 0$, there exists $N \in \mathbb{N}$ such that $n>N$ implies $x_{n}\geq M$.\\
-\\
-(b) Similar for $x_{n} \rightarrow -\infty$
-\pagebreak
 
+\begin{definition}
+Let ${x_{n}}$ be a sequence of real numbers.
+
+\begin{enumerate}
+	\item  We say $(x_{n})$ tends to $\infty$ or \textbf{diverges} to $\infty$, and write $x_{n}\rightarrow \infty$ as $n \rightarrow \infty$ if for all $M > 0$, there exists $N \in \mathbb{N}$ such that $n>N$ implies $x_{n}\geq M$.\\
+
+	\item  Similar for $x_{n} \rightarrow -\infty$
+\end{enumerate}
+\end{definition}
 
 \section{The monotone Convergence Theorem}
 \subsection{Monotonic}
