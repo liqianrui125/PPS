@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+
+\input{macros}
+\input{preamble}
+
+\title{PPS Cheatsheet}
+\author{Qianrui Li}
+\date{\today}
+\begin{document}
+\maketitle
+
+
+\section{Logic}
+
+\begin{definition}[Disjunction]
+	$A\lor B$ is true if either A or B is true.
+\end{definition}
+
+\begin{definition}[Converse]
+	Converse to a conditional $A \implies B$ is $B \implies A$.
+\end{definition}
+
+\begin{definition}[Contrapositive]
+	Contrapositive to a conditional $A \implies B$ is $\bar{B} \implies \bar{A}$.
+\end{definition}
+
+\section{Real Numbers}
+
+\begin{definition}[Field]
+	A field is a set $F$ with two operations, addition and multiplication, such that
+	\paragraph{Addition}
+	\begin{enumerate}
+		\item $a+b \in F$ for all $a,b \in F$.
+		\item $a+b = b+a$ for all $a,b \in F$.
+		\item $(a+b)+c = a+(b+c)$ for all $a,b,c \in F$.
+		\item There exists an element $0 \in F$ such that $a+0 = a$ for all $a \in F$.
+		\item For each $a \in F$, there exists an element $-a \in F$ such that $a+(-a) = 0$.
+	\end{enumerate}
+	\paragraph{Multiplication}
+	\begin{enumerate}
+		\item $a \cdot b \in F$ for all $a,b \in F$.
+		\item $a \cdot b = b \cdot a$ for all $a,b \in F$.
+		\item $(a \cdot b) \cdot c = a \cdot (b \cdot c)$ for all $a,b,c \in F$.
+		\item There exists an element $1 \in F$ such that $a \cdot 1 = a$ for all $a \in F$.
+		\item For each $a \in F$, if $a \neq 0$, there exists an element $a^{-1} \in F$ such that $a \cdot a^{-1} = 1$.
+	\end{enumerate}
+	\paragraph{Distributive Law}
+	\begin{enumerate}
+		\item $a \cdot (b+c) = a \cdot b + a \cdot c$ for all $a,b,c \in F$.
+	\end{enumerate}
+\end{definition}
+
+\section{Inequality}
+
+\begin{definition}[Ordered Field]
+	An ordered field is a field $F$ with a relation $<$ such that
+	\begin{enumerate}
+		\item Exactly one of is true: $a < 0$, $a = 0$, or $0 < a$ 
+		\item $b<a $ imples $ -a<-b$.
+		\item If $a < b$, then $a+c < b+c$ for all $a,b,c \in F$.
+		\item $a>b$ and $b>0$ implies that $ab>0$.
+		\item If $a < b$ and $b < c$, then $a < c$ for all $a,b,c \in F$.
+	\end{enumerate}
+\end{definition}
+\begin{theorem}[AM-GM Inequality]
+	For any non-negative real numbers $a_1, a_2, \dots, a_n$, we have
+	\begin{equation}
+		\frac{a_1 + a_2 + \dots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \dots a_n}
+	\end{equation}
+\end{theorem}
+%cauchy-schwarz Inequality
+\begin{theorem}[Cauchy-Schwarz Inequality]
+	For any real numbers $\bm{u} = [x_1, x_2, \dots, x_n]$ and $\bm{v} = [y_1, y_2, \dots, y_n]$, we have
+	\begin{equation}
+		x_1y_1+x_2y_2+\cdots+x_ny_n \leq \sqrt{x_1^2+x_2^2+\cdots+x_n^2}\sqrt{y_1^2+y_2^2+\cdots+y_n^2} \implies \bm{u}\cdot \bm{v} \leq ||\bm{u}|| ||\bm{v}||
+	\end{equation}
+\end{theorem}
+\begin{theorem}[Triangular Inequality]
+	$$|x+y|\leq  |x|+|y|;\hspace{1cm} ||x|-|y|| \geq |x+y|$$
+\end{theorem}
+\begin{theorem}[Formula for Geometric Series]
+	For any real number $x$ and integer $n \geq 0$, we have
+	\begin{equation}
+		a + ax + ax^2 + \dots + ax^n = \frac{a-x^{n+1}}{1-x}
+	\end{equation}
+\end{theorem}
+
+\section{Completeness Axiom}
+
+\begin{axiom}[Completeness of Real number]
+	Every nonempty set of real numbers that is bounded above has a least upper bound.
+\end{axiom}
+
+\begin{definition}[Monotone Sequence]
+	A sequence $(a_n)^{\infty}_{n=1}$ is increasing if $a_n \leq a_{n+1}$ for all $n \geq 1$. A sequence $(a_n)^{\infty}_{n=1}$ is decreasing if $a_n \geq a_{n+1}$ for all $n \geq 1$.
+	A seqence is monotone if it is increasing or decreasing.
+\end{definition}
+\begin{theorem}[Monotone Convergence Theorem]
+	A bounded above increasing sequence of real number converges; likewise a bounded below decreasing real sequence converges.
+\end{theorem}
+
+\begin{definition}[Convergence of series (Partial Sum)]
+	Given a sequence $(a_j)$, the infinite series $\sum_{j=1}^{\infty} a_j$ converges to $s$ if the sequence of partial sums 
+	$$s_n = \sum ^{n}_{j=1}a_j$$
+	converges as $n \to \infty$. If $(s_n)$ converges we denote its limit by $\sum^{\infty}_{j=1}a_j$
+\end{definition}
+\begin{definition}[Base of Natural Logarithm]	
+	\begin{equation}
+		e=\sum^{\infty}_{n=0}\frac{1}{n!}=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n
+	\end{equation}
+\end{definition}
+
+\section{Polynomials}
+
+\begin{definition}[N-degree Complex Polynomial]
+	For $n\in \bb{N}$, an \emph{n-degree complex polynomial} is a function of the form 
+	\begin{equation}
+		p(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots+a_1z+a_0
+	\end{equation}
+	where $a_n\neq 0$ and $a_i \in \bb{C}$. A root of $p$ is number $\alpha$ such that $p(\alpha)=0$. 
+\end{definition}
+
+\begin{theorem}[Root Coefficient Theorem]
+	Let $p(z) = x^n+a_{n-1}x^{n-1} + \cdots + a_1x+a_0$ have roots $r_1, r_2, \cdots r_n$, then
+	\begin{equation}
+		r_1+r_2+\cdots+r_n=-a_{n-1};\hspace{1cm} r_1r_2\cdots r_n=(-1)^na_0
+	\end{equation}
+	In general, let $s_j$ denote the sum of all products of j-tuples of the roots (e.g., $s_2 = r_1r_2+r_1r_3+r_2r_3 \cdots$), then 
+	\begin{equation}
+		s_j = (-1)^ja_{n-j}
+	\end{equation}
+\end{theorem}
+\begin{theorem}[Fundamental Theorem of Arithmetic]
+	Let $n\leq 2$ be an integer.
+
+	\textbf{Existance} $n$ is equal to the product of prime number $n=p_1^{r_1}p_2^{r_2}\cdots p_k^{r_k} $, where $p_1<p_2<\cdots<p_k$ and $r_i>0$ for all $i$.
+
+	\textbf{Uniqueness} The factorisation is unique, i.e., if $q_1^{s_1}q_2^{s_2}\cdots q_l^{s_l}=n=p_1^{r_1}p_2^{r_2}\cdots p_k^{r_k} $ are ``two`` prime factorisations, then $k=l$ and $p_i=q_i$, $r_i=s_i$ for all $i$.
+\end{theorem}
+
+\section{Number Theory}
+
+\begin{theorem}
+	Let $m\geq 2$ be a natural number, $\bb{Z}/m$ is a field if and only if $m$ is a prime.
+\end{theorem}
+\begin{theorem}[Fermat's Little Theorem]
+	Let $p$ be a prime number, then for any integer $a$, if $p$ does not divide a, we have
+	\begin{equation}
+		a^{p-1}\equiv 1 \mod p
+	\end{equation}
+\end{theorem}
+
+\begin{theorem}
+Let $n\in \bb{N}$ and $p$ be a prime. If $n$ and $p-1$ are coprime and $p$ divides not $b$, the equation 
+\begin{equation}
+	x^n\equiv b \mod p
+\end{equation}
+has exactly one solution $x\in \{0, 1, \cdots, p-1\}$.
+\end{theorem}
+
+\section{Relation and Function}
+
+\begin{definition}[Cartesian Product]
+	Let $X$ and $y$ be sets; their Cawrtesian Product is the set of ordered pairs 
+	\[ 
+		X\times Y = \{(x,y): x\in X, y\in Y\}
+	\]
+\end{definition}
+\begin{definition}[Injectivity and Surjectivity]
+	Let $f:X \rightarrow y$ be a function. 
+	\begin{enumerate}
+		\item		It is \emph{injective} if and only if $f(a)=f(b) \implies a=b$
+		\item It is \emph{surjective} if and only if for all $y\in Y$ we have $x\in X$ such that $f(x)=y$	
+		\item	It is \emph{bijective} if and only if it is both injective and surjective.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[Images and Preimages]
+	Let $f:X \rightarrow Y$ be a function. For $A \subseteq X$, the \emph{image} of $A$
+	\[
+		f(A) = \{f(x): x\in A\}\subseteq Y
+	\]
+	For $B \subseteq Y$, the \emph{preimage} of $B$ is 
+	\[
+		f^{-1}(B) = \{x\in X: f(x)\in B\}\subseteq X
+	\]
+\end{definition}
+
+\begin{definition}[Cardinality]
+	Tow sets $A, B$ have the same cardinality, (i.e., isomorphic) if there is a bijection $f:A \rightarrow B$. We write $|A|=|B|$ or $A \cong B$. If there is an injective map, we write $|A| \leq |B|$, and if $|A| \leq |B|$ and there is no injective map from $B$ to $A$, we write $|A| < |B|$.
+
+	When $|A| \leq \bb{N}$, we say $A$ is countable.
+\end{definition}
+
+\begin{definition}
+	Let $S=\{a_1, a_2, \cdots, a_n\}$ be a set of $n$ distinct objects. An ordering (or arrangement) of $S$ is a sequence $(a_1, \cdots, a_n$ in which each element of $S$ appears exactly once.
+\end{definition}
+
+\begin{theorem}
+For $n\geq 0$, 
+\[
+	2^n = \sum_{k=0}^n \binom{n}{k}
+\]
+\end{theorem}
+
+\begin{definition}
+	Given $n\in \bb{N}, k \in \bb{N}$, with $k \geq 2$ and non-negative integers $r_1, r_2, \cdots r_k$ such that $r_1+\cdots r_k=n$, we denote the number of ordered partitions $(A_1, \cdots, A_k)$ of set $S$ such that $|A_i|=r_i$ by 
+	\[ 
+		\binom{n}{r_1, r_2, \cdots, r_k} = \frac{n!}{r_1!r_2!\cdots r_k!}
+	\] 
+\end{definition}
+
+\section{Permutaion}
+
+\begin{definition}
+	Given $n \in \bb{N}$, denote by $S_n$ the set of all bijections $\{1,2,3,4, \cdots,n\} \rightarrow \{1,2,3, \cdots, 4\}$. We call $S_n$ permutation of the set $\{1,2,3,\cdots,n\}$. (Which is also called the symmetric group of degree $n$)
+\end{definition}
+\end{document}

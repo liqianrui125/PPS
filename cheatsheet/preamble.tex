@@ -1,0 +1,75 @@
+\usepackage[tmargin=2cm,rmargin=2.5cm,lmargin=2.5cm,bmargin=2cm,footskip=0.4cm]{geometry} 
+% Top margin, right margin, left margin, bottom margin, footnote skip
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex}
+\addbibresource{./reference/reference.bib}
+% linktocpage shall be added to snippets.
+\usepackage{hyperref,theoremref}
+\hypersetup{
+	colorlinks, 
+	linkcolor={red!40!black}, 
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black},
+	linktocpage % Link table of content to the page instead of the title
+}
+
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{import}
+\usepackage{bm}
+\usepackage{breqn}
+
+
+\newtheorem{theorem}{Theorema}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}{Corollarium}[section]
+\newtheorem{proposition}{Propositio}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Definitio}[section]
+
+\theoremstyle{definition}
+\newtheorem{axiom}{Axioma}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Observatio}[section]
+\newtheorem{hypothesis}{Coniectura}[section]
+\newtheorem{example}{Exampli Gratia}[section]
+
+% Proof Environments
+\newcommand{\thm}[2]{\begin{theorem}[#1]{}#2\end{theorem}}
+
+%TODO mayby proof environment shall have more margin
+\renewenvironment{proof}{\vspace{0.4cm}\noindent\small{\emph{Demonstratio.}}}{\qed\vspace{0.4cm}}
+% \renewenvironment{proof}{{\bfseries\emph{Demonstratio.}}}{\qed}
+\renewcommand\qedsymbol{Q.E.D.}
+% \renewcommand{\chaptername}{Caput}
+\renewcommand{\contentsname}{Index Capitum} % Index Capitum 
+\renewcommand{\emph}[1]{\textbf{\textit{#1}}}
+\renewcommand{\ker}[1]{\operatorname{Ker}{#1}}
+
+%\DeclareMathOperator{\ker}{Ker}
+
+% New Commands
+\newcommand{\bb}[1]{\mathbb{#1}} %TODO add this line to nvim snippets
+
+% ALGEBRA
+\newcommand{\orb}[2]{\text{Orb}_{#1}({#2})}
+\newcommand{\stab}[2]{\text{Stab}_{#1}({#2})}
+\newcommand{\im}[1]{\text{im}{\ #1}}
+\newcommand{\se}[2]{\text{send}_{#1}({#2})}
+
+%STATISTICS
+\newcommand{\var}[1]{\text{Var}(#1)}
+\newcommand{\ud}[1]{\underline{#1}}
+\newcommand{\cor}[1]{\text{Cor}(#1)}
+\newcommand{\std}[1]{\text{Std}(#1)}
+\newcommand{\ste}[1]{\text{S.E.}(#1)}
